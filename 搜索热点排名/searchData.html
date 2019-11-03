@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>searchData</title>
+	<style>
+		*{
+			padding:0;
+			margin:0;
+			list-style: none;
+
+		}
+	   .clearF::after {
+            content: '';
+            display: block;
+            clear: both;
+            overflow: hidden;
+        }
+		.wrapper{
+			width:400px;
+			border:1px solid black;
+			margin:100px auto 0px;
+            padding:10px;
+		}
+		.wrapper .topside{
+			width:100%;
+			height:50px;
+
+		}
+		.wrapper .topside .hot{
+			float:left;
+			line-height: 50px;
+			font-weight: bold;
+
+		}
+		.wrapper .topside .change{
+			float:right;
+			line-height: 50px;
+			color:blue;
+
+		}
+		.wrapper .content .number{
+			display: inline-block;
+			width:20px;
+			height:20px;
+			background-color: #0bf;
+			text-align: center;
+
+		}
+		.wrapper .content .show{
+			width:100%;
+			height:30px;
+			border-bottom: 1px solid black;
+			margin-bottom: 5px;
+		 
+
+		}
+		.wrapper .content .remove{
+			display: none;
+		}
+		.wrapper  .content .data{
+			float:right;
+
+		}
+		.wrapper .content .data::after{
+			content:"";
+			display: inline-block;
+			clear:both;
+			width:15px;
+			height:15px;
+			
+			background-size:100% 100%;
+			 }
+		.wrapper .content .data.down::after{
+			background-position-Y:2px; 
+			background-image: url(img/down.png);
+		}
+        .wrapper .content .data.up::after{
+        	background-position-Y:5px; 
+			background-image: url(img/up.png);
+		}
+
+	</style>
+	
+</head>
+<body>
+	<div class="wrapper">
+		<div class="topside">
+			<span class = "hot">搜索热点</span>
+			<span class = "change">换一换</span>
+		</div>
+		<ul class="content">
+			<li class = "show remove clearF">
+				<span class = "number">1</span>
+                <span class = "inner-content">金星直播秀</span>
+			    <span class = "data">13443</span>
+			</li>
+			 
+		</ul>
+	</div>
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="serverData.js"></script>
+	
+	<script type="text/javascript" src="server.js"></script>
+</body>
+</html>
